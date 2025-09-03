@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: poppins, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: black;
+
+}
+
+/* Logo image style */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* round logo */
+}
+
+/* Navbar icons spacing */
+nav ul li a i {
+    margin-right: 6px;
+}
+
+
+nav ul {
+    list-style: none;
+
+}
+
+nav ul li {
+    margin: 10px 10px;
+    display: inline-block;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(219, 211, 211);
+    padding: 8px;
+    border-radius: 10px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+button {
+    color: rgb(7, 8, 8);
+    font-weight: 200;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+
+}
+
+
+main {
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(restaurent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.about {
+    background: rgba(225, 225, 225, 0.8);
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    display: flex;
+    border-radius: 14px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    margin-top: 0px;
+    color: #333;
+}
+
+.about-text p {
+    color: #444;
+    line-height: 1.6;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#restaurant {
+    background: linear-gradient(to right, #fff3e6, #ffe6cc);
+    max-width: 100%;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 14px;
+    margin-top: 40px;
+}
+
+#restaurant .about-text {
+    flex: 1;
+}
+
+#restaurant .about-text h1 {
+    font-size: 2rem;
+    color: #b34700;
+    /* warm heading color */
+}
+
+#restaurant .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #663300;
+}
+
+#restaurant .about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+#restaurant .about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ========== Contact Section Style ========== */
+#contact {
+    background: linear-gradient(to right, #e6f7ff, #cceeff);
+    /* soft blue theme */
+    max-width: 100%;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 14px;
+    margin-top: 40px;
+    text-align: center;
+    flex-direction: column;
+}
+
+#contact .about-text h1 {
+    font-size: 2rem;
+    color: #004466;
+    /* deep blue heading */
+    margin-bottom: 20px;
+}
+
+#contact .about-text p {
+    font-size: 1.1rem;
+    color: #00334d;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+#contact button {
+    background-color: #0077b3;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+#contact button:hover {
+    background-color: #005580;
+
+    /* ========== Contact Form Style ========== */
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        border: 1px solid #0077b3;
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: #005580;
+        box-shadow: 0px 0px 5px rgba(0, 119, 179, 0.5);
+    }
+
+    .contact-form button {
+        background-color: #0077b3;
+        color: white;
+        font-size: 1rem;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background-color: #005580;
+    }
+
+}
+
+/* 🔹 Intro Section */
+.intro {
+    height: 100vh;
+    /* Full screen */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('putra.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.intro p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+/* 🔹 Explore Button */
+.explore-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background: orange;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: darkorange;
+    transform: scale(1.05);
+}
+
+/* 🔹 Menu Section */
+.menu {
+    padding: 60px 40px;
+    text-align: center;
+    background: #fff3e6;
+}
+
+.menu h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #b34700;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Gallery Section */
+.gallery {
+    padding: 60px 40px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.gallery h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #004466;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: orange;
+}
+
+/* Specials Section */
+.specials {
+    padding: 60px 40px;
+    background: #fff8e6;
+    text-align: center;
+}
+
+.specials h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #b34700;
+}
+
+.specials-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.special-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.special-card:hover {
+    transform: scale(1.05);
+}
+
+/* Opening Hours Section */
+.hours {
+    padding: 60px 40px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.hours h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #004466;
+}
+
+.hours table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+}
+
+.hours table td {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: orange;
+}
